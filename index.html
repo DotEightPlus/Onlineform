@@ -48,7 +48,7 @@
                                 <div class="input-group">
                                      <label class="label">Desired date of occupancy:</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <input class="input--style-4 js-datepicker" type="text" name="occ_date">
                                        
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                 <div class="input-group">
                                      <label class="label">Desired Length of occupancy:</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <input class="input--style-4 js-datepicker" type="text" name="occ_length">
                                        
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                 <div class="input-group">
                                     <label class="label"><NAV>Number of Bedrooms</NAV></label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="bed_num">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>1 Bedroom</option>
                                     <option>2 Bedrooms</option>
@@ -83,7 +83,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Reason for moving:</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input class="input--style-4" type="text" name="reason">
                                 </div>
                             </div>
                         </div><br/><br/>
@@ -106,14 +106,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Name of Applicant:</label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="full_name" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Number of Adults and Children:</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input class="input--style-4" type="text" name="occ_num">
                                 </div>
                             </div>
                         </div>
@@ -123,11 +123,11 @@
                                     <label class="label">Water bed:</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">YES
-                                            <input type="radio"  name="bed">
+                                            <input type="radio" value="yes"  name="bed">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">NO
-                                            <input type="radio" name="bed">
+                                            <input type="radio" value="no" name="bed">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -138,11 +138,11 @@
                                     <label class="label">Smokers:</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">YES
-                                            <input type="radio" name="smoke">
+                                            <input type="radio" value="yes" name="smoke">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">NO
-                                            <input type="radio" name="smoke">
+                                            <input type="radio" value="no" name="smoke">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -154,11 +154,11 @@
                                     <label class="label">Pets:</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">YES
-                                            <input type="radio" name="petting">
+                                            <input type="radio" value="yes" name="pet">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">NO
-                                            <input type="radio" name="petting">
+                                            <input type="radio" value="no" name="pet">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -168,14 +168,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Present Address:</label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="add_now" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">How long at present address:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="add_length">
                                 </div>
                             </div>
                         </div>
@@ -183,14 +183,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Home Phone No:(+1)</label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="phone" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Current rent payment:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="cur_rent">
                                 </div>
                             </div>
                         </div>
@@ -198,14 +198,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label"><h4>PRIOR ADDRESS:</h4></label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="prior_add" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">How long at prior address:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="prior_length">
                                 </div>
                             </div>
                         </div>
@@ -213,14 +213,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Landlord's Name:</label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="landlord_name" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone No:(+1)</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="landlord_phone">
                                 </div>
                             </div>
                         </div>
@@ -228,14 +228,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Rent payment:</label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="rent_pay" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Reason for moving:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="reason">
                                 </div>
                             </div>
                         </div>
@@ -243,14 +243,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Social Security No:</label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="sec_num" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Driver's License No:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="drive_num">
                                 </div>
                             </div>
                         </div>
@@ -258,14 +258,14 @@
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Vehicle Model:</label>
-                                    <input class="input--style-4" type="text" >
+                                    <input class="input--style-4" type="text" name="vec_mod" >
                                 </div>
                             </div>
 
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Year:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="year">
                                 </div>
                             </div>
                         </div>
@@ -274,7 +274,7 @@
                                 <div class="input-group">
                                     <label class="label"><NAV>Sources of Income</NAV></label>
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="income_source">
                                     <option disabled="disabled" selected="selected">Choose option</option>
                                     <option>Wages</option>
                                     <option>Salary</option>
@@ -289,50 +289,50 @@
                                 </div>
                             </div>
 
-                            <div class="col-2">
+                            <!-- <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Current Employer:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="employer">
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                         <div class="row row-space">
+                        <!--  <div class="row row-space">
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Position Held:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="position">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">How long:</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" name="employ_length">
                                 </div>
                             </div>
-                        </div>
-                           <div class="row row-space">
+                        </div> -->
+                           <!-- <div class="row row-space">
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Supervisor:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="supervisor">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Business Phone:(+1)</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" name="biz_phone">
                                 </div>
                             </div>
-                        </div>
-                        <div class="row row-space">
+                        </div> -->
+                       <!--  <div class="row row-space">
                             <div class="col-2">
                                <div class="input-group">
                                     <label class="label">Annual Income:</label>
-                                    <input class="input--style-4" type="text">
+                                    <input class="input--style-4" type="text" name="income">
                                 </div>
                             </div>
                           
-                        </div>
+                        </div> -->
                         <h4>CURRENT EMPLOYER</h4><br/><br/>
                         <div class="row row-space">
                             <div class="col-2">
