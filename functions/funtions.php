@@ -15,7 +15,7 @@ function register_user($fname, $lname, $tel, $email, $address, $gender, $usrname
 	$datereg = date("Y-m-d h:i:sa");
 
 
-$sql = "INSERT INTO ichange_signup(`sn`, `First Name`, `Last Name`, `Telephone`, `Email`, `Address`, `Gender`, `Username`, `Password`, `Datereg`, `Active`)";
+$sql = "INSERT INTO (`sn`, `First Name`, `Last Name`, `Telephone`, `Email`, `Address`, `Gender`, `Username`, `Password`, `Datereg`, `Active`)";
 $sql.= " VALUES('1', '$fname', '$lname', '$tel', '$email', '$address', '$gender', '$usrname', '$pword', '$datereg', '0')";
 $result = query($sql);
 confirm($result);
