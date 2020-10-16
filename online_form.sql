@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 15, 2020 at 07:42 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Generation Time: Oct 17, 2020 at 12:21 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `online_form`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `form_admin`
+--
+
+CREATE TABLE `form_admin` (
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `form_admin`
+--
+
+INSERT INTO `form_admin` (`password`) VALUES
+('adminlogin');
 
 -- --------------------------------------------------------
 
@@ -110,6 +126,13 @@ CREATE TABLE `form_data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `form_data`
+--
+
+INSERT INTO `form_data` (`id`, `renter_add`, `rentee_add`, `occ_date`, `occ_length`, `bed_num`, `reason_move`, `secure_depo`, `pet_depo`, `full_name`, `occ_num`, `bed`, `smoke`, `pet`, `add_now`, `add_length`, `phone`, `cur_rent`, `prior_add`, `prior_length`, `landlord_name`, `landlord_phone`, `rent_pay`, `reason`, `income_source`, `price`, `employer_name`, `position`, `employ_length`, `supervisor`, `biz_phone`, `income`, `p_employer_name`, `p_position`, `p_employ_length`, `p_supervisor`, `p_biz_phone`, `p_income`, `relate_name`, `relate_add`, `relate_phone`, `relate_relation`, `per_name_1`, `per_add_1`, `per_phone_1`, `per_relation_1`, `per_name_2`, `per_add_2`, `per_phone_2`, `per_relation_2`, `evict`, `evict_ex`, `refused`, `refused_ex`, `interrupt`, `interrupt_ex`, `convicted`, `convicted_ex`, `pet_name_1`, `pet_type_1`, `pet_size_1`, `indoor_1`, `pet_name_2`, `pet_type_2`, `pet_size_2`, `indoor_2`, `pet_name_3`, `pet_type_3`, `pet_size_3`, `indoor_3`, `app_date`, `deal`, `deal_name`, `tenant_name`, `tenant_pos`, `tenant_wage`, `tenant_per`, `tenant_dur`) VALUES
+(7, 'I am the best', 'I am the best and will always be the best', 27, 'ewq', '2 Bedrooms', 'e2e', 0, 0, 'sasd', 'wew', 'yes', 'no', 'no', 'ewew', 'ewew', 3232, 2432, 'Ikole Ekiti', 'dssd', 'saas', 332, 331, 'ds', 'Commision', 333, 'fddf', 'sxz', 'wq', 'dsds', 0, '3232', 'fddf', 'sxz', 'wq', 'dsds', 0, 32, 'ssxs', 'xsxs', 32311, 'ssdcx', 'sds', 'ews', 33232, 0, 'sa', 'dsdssa', 33232, 'wq', 'No', '', 'No', '', 'on', '', 'No', 0, 'qwd', 'qw', 'qw', 'Indoor', 'qw', 'wq', 'qwq', 'Indoor', 'dss', 'dsds', 'sds', 'Indoor', 29, 'on', 'asa', 'dss', 'asa', 223, '23', '32');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -127,7 +150,7 @@ ALTER TABLE `form_data`
 -- AUTO_INCREMENT for table `form_data`
 --
 ALTER TABLE `form_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
