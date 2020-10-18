@@ -26799,7 +26799,7 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 .user-block .description,
 .user-block .comment {
   display: block;
-  margin-left: 50px;
+  
 }
 
 .user-block .username {

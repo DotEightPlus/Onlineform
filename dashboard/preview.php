@@ -48,12 +48,12 @@ if(!isset($_SESSION['started'])) {
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th >Admission No. </th>
-                            <th >First Name </th>
-                            <th >Last Name</th>
+                      <th >Name Of Applicant</th>
+                      <th >Address To be rented</th>
+                      <th >Applicant Present Address</th>
                            
-                            <th >Gender </th>
-                            <th ></th>
+                      <th >Applicant's Phone Number</th>
+                      <th ></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -65,10 +65,11 @@ if(!isset($_SESSION['started'])) {
   ?>                
                     <tr>
                     
-                                                    <td><?php echo $row['renter_add'] ?></td>
-                                                    <td><?php echo $row['occ_date'] ?></td>
+                                                    <td><?php echo $row['full_name'] ?></td>
+                                                    <td><?php echo $row['rentee_add'] ?></td>
                                                     
-                                                    <td ><?php echo $row['rentee_add'] ?></td>
+                                                    <td ><?php echo $row['add_now'] ?></td>
+                                                    <td ><?php echo $row['phone'] ?></td>
                                                     <?php echo '
                                                     <td ><a href="./more?id='.$row['id'].'">View Full Details</a></td>';
                                                     ?>

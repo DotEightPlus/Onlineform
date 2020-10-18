@@ -45,33 +45,37 @@ if(!isset($_SESSION['started'])) {
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form name="uploadQuestionaire" role="form">
-                   <div class="form-group">
-                    <label for="exampleInputEmail1">Question Serial Number .:</label>
-                    <input type="number" class="form-control" id="sn" placeholder="e.g 1, 2, 3 e.t.c">
+                <form method="POST" action="edited.php" role="form">
+                  <div class="form-group">
+                    <label for="Landlord Address">Landlord Address:</label>
+                    <textarea type="text" required name="land_add" class="form-control col-sm-12 col-lg-6" rows="3" id="sn" placeholder="eg: David Westley
+14018 n 39th ave
+Phonix, Arizona 85053"></textarea>
                   </div>
                    <div class="form-group">
-                        <label>Type in a Question.:</label>
-                        <textarea class="form-control" rows="3" id="ques" placeholder="e.g What is my name?"></textarea>
+                        <label>Address of house to be rented:</label>
+                        <textarea type="text" required name="rent_add" class="form-control col-sm-12 col-lg-6" rows="3" id="ques" placeholder="eg:  House
+9327 Brushy point st
+San Antonio, Texas 78250"></textarea>
                       </div>
                    <div class="row">
                     <div class="col-sm-6">
                        <div class="form-group">
-                    <label for="exampleInputEmail1">Option A .:</label>
-                    <input type="text" class="form-control" id="oa" placeholder="e.g Dot">
+                    <label for="securitydeposit">Security Deposit ($):</label>
+                    <input type="number" required class="form-control" name="secure_depo" id="oa" placeholder="e.g 1000">
                   </div>
                     </div>
 
                     <div class="col-sm-6">
                        <div class="form-group">
-                    <label for="exampleInputEmail1">Option B .:</label>
-                    <input type="text" class="form-control" id="ob" placeholder="e.g Eight">
+                    <label for="Petdeposit">Pet Deposit ($):</label>
+                    <input type="number" required class="form-control" name="pet_depo" id="ob" placeholder="e.g 1000">
                   </div>
                     </div>
                     
                   </div>
 
-                   <div class="row">
+                 <!--   <div class="row">
                     <div class="col-sm-6">
                        <div class="form-group">
                     <label for="exampleInputEmail1">Option C .:</label>
@@ -97,10 +101,7 @@ if(!isset($_SESSION['started'])) {
                           <option id="correct">Option D</option>
                         </select>
                       </div>
-
-                   <div class="form-group">
-                    <input type="text" class="form-control" value="<?php echo $data; ?>" id="subj" hidden>
-                  </div>
+ -->
 
                   <p class="text-danger">Make sure you recheck all questions typed in before uploading</p>
                    <button type="submit" id="Questionaire" class="btn float-right btn-danger btn-outline-light">Save and Update Changes</button>
