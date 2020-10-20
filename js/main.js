@@ -13,23 +13,27 @@ $(function(){
             finish : 'Submit',
             current : ''
         },
-        onStepChanging: function (event, currentIndex, newIndex) { 
+       onFinished: function (event, currentIndex) { 
             //var fullname = $('#first_name').val() + ' ' + $('#last_name').val();
             //var email = $('#email').val();
             //var phone = $('#phone').val();
-            //var username = $('#username').val();
+            var username = $('#Desired_date').val();
             //var gender = $('form input[type=radio]:checked').val();
             //var address = $('#address').val();
 
             //$('#fullname-val').text(fullname);
             //$('#email-val').text(email);
             //$('#phone-val').text(phone);
-            //$('#username-val').text(username);
+            $('#username-val').text(Desired_date);
             //$('#address-val').text(address);
             //$('#gender-val').text(gender);
 
-            return true;
+        
+               return true;
         }
+   
+
+       
     });
     $("#date").datepicker({
         dateFormat: "MM - DD - yy",

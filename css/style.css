@@ -1,5 +1,10 @@
 body {
 	margin:  0;
+	background: -webkit-gradient(linear, left bottom, right top, from(#fc2c77), to(#6c4079));
+    background: -webkit-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
+    background: -moz-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
+    background: -o-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
+    background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
 }
 .page-content {
 	width: 100%;
@@ -26,7 +31,7 @@ body {
 }
 .wizard-v3-content   {
 	background: #fff;
-	width: 780px;
+	width: 1000px;
 	box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 	-o-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 	-ms-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
@@ -311,7 +316,7 @@ body {
 }
 .inner .form-row.form-row-date .form-holder select {
     float: left;
-    width: 19%;
+    width: 59%;
     margin-right: 20px;
 }
 .inner .form-row .form-holder input,
@@ -350,7 +355,7 @@ body {
 .inner .form-row .form-holder select {
 	font-size: 15px;
     color: #666;
-    background: #fff url('../images/wizard_v4_icon.png') no-repeat scroll;
+    background: #fff; 
     background-position: right 0 center;
     z-index: 1;
     cursor: pointer;

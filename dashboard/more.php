@@ -32,13 +32,14 @@ $data = $_GET['id'];
  $sql="SELECT * FROM `form_data` WHERE `id` = '$data'";
  $result_set=query($sql);
  $row= mysqli_fetch_array($result_set)
+
   ?>  
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
         <div class="row">
           
-          <div>
+          <div class="col-lg-12">
             <div class="card">
              
               <div class="card-body">
@@ -147,139 +148,7 @@ $data = $_GET['id'];
                     <!-- /.post -->
 
                   </div>
-                  <!-- /.tab-pane -->
-                  <div class="tab-pane" id="timeline">
-                    <!-- The timeline -->
-                    <div class="timeline timeline-inverse">
-                      <!-- timeline time label -->
-                      <div class="time-label">
-                        <span class="bg-danger">
-                         <?php echo date("d-m-y"); ?>
-                        </span>
-                      </div>
-                      <!-- /.timeline-label -->
-                      <!-- timeline item -->
-                      <div>
-                        <i class="fas fa-file bg-primary"></i>
-
-                        <div class="timeline-item">
-                        
-                          <h3 class="timeline-header"><a href="#">Admission Letter</a></h3>
-
-                          <div class="timeline-body">
-                           Print Admission Letter, Click on the button below.
-                          </div>
-                          <div class="timeline-footer">
-                            <?php echo'
-                            <a target="_blank" href="adml.php?id='.$row['id'].'" class="btn btn-primary btn-sm">Print</a>';
-                            ?>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END timeline item -->
-                      <!-- timeline item -->
-                      <div>
-                        <i class="fas fa-user bg-info"></i>
-
-                        <div class="timeline-item">
-                      
-                          <h3 class="timeline-header border-0"><a href="#">QR Code</a> 
-                          </h3>
-                            <div class="timeline-footer">
-                            <?php
-                               $data = $row['AdminID'];
-                                $pass = str_replace('/', '', $data);
-                             echo'
-
-                            <img src="upload/QRCard/'.$pass.'.png">';
-                            ?>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END timeline item -->
-                      <!-- timeline item -->
-                      <div>
-                        <i class="fas fa-card bg-warning"></i>
-
-                        <div class="timeline-item">
-                        
-                          <h3 class="timeline-header"><a href="#">ID Card</a></h3>
-
-                          <div class="timeline-body">
-                            <?php
-                                $dat = $row['AdminID'];
-                                $pas = str_replace('/', '', $dat);
-                             echo'
-                           <iframe style="border:none; width: 227px; height: 192px;" src="http://paradisemodelschool.com.ng/upload/IdCard/'.$pas.'.html"></iframe>
-                          </div>
-                          <div class="timeline-footer">
-                            <a target="_blank" href="atcd.php?id='.$row['id'].'" class="btn btn-warning btn-flat btn-sm">Print ID Card</a>
-                          </div>
-                          ';
-                           ?>
-                        </div>
-                      </div>
-                      <!-- END timeline item -->
-                      <!-- timeline time label -->
-                     
-                      <!-- /.timeline-label -->
-                      <!-- timeline item -->
-                     
-                      <!-- END timeline item -->
-                    
-                    </div>
-                  </div>
-                  <!-- /.tab-pane -->
-
-                  <div class="tab-pane" id="settings">
-                    <form class="form-horizontal">
-                      <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputName" placeholder="Name">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName2" placeholder="Name">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
-                        <div class="col-sm-10">
-                          <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" class="btn btn-danger">Submit</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <!-- /.tab-pane -->
+                 
                 </div>
                 <!-- /.tab-content -->
               </div><!-- /.card-body -->

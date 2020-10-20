@@ -34,7 +34,7 @@ if(!isset($_SESSION['started'])) {
  while($row= mysqli_fetch_array($result_set))
  {
   if(row_count($result_set) == "") {
-            
+           
           } else {
           ?>     
 

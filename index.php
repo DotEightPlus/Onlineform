@@ -26,7 +26,11 @@ $row = mysqli_fetch_assoc($result) ?>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-	<div class="page-content" style="background-image: url('images/wizard-v3.jpg')">
+	<div class="page-content" style="background: -webkit-gradient(linear, left bottom, right top, from(#fc2c77), to(#6c4079));
+    background: -webkit-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
+    background: -moz-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
+    background: -o-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
+    background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);">
 		<div class="wizard-v3-content">
 			<div class="wizard-form">
 				<div class="wizard-header">
@@ -72,7 +76,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="Desired_Length" name="occ_length" required>
+											<input type="text" class="form-control" id="Desired_Len" name="occ_length" required>
 											<span class="label">Desired Length of occupancy:</span>
 					  						<span class="border"></span>
 										</label>
@@ -106,26 +110,23 @@ $row = mysqli_fetch_assoc($result) ?>
                         <h5> The following deposits are required:</h5>
                         		<div class="form-row">
 									<div class="form-holder form-holder-2">
-										<label class="form-row-inner">
-											<input type="number" class="form-control" id="moving" name="secure_depo" value="<?php  echo $row['secure_depo'];  ?>" disabled>
-											<span class="label">Security Deposit:</span>
-					  						<span class="border"></span>
+										<label class="form-row-inner">Security Deposit:
+											<input type="number" class="form-control" id="secure" name="secure_depo" value="<?php  echo $row['secure_depo'];  ?>" disabled>
 										</label>
 									</div>
 								</div>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
-										<label class="form-row-inner">
-											<input type="number" class="form-control" id="moving" name="pet_depo" value="<?php  echo $row['pet_depo'];  ?>" disabled>
-											<span class="label">Pet Deposit:</span>
-					  						<span class="border"></span>
+										<label class="form-row-inner">Pet Deposit:
+											<input type="number" class="form-control" id="pet" name="pet_depo" value="<?php  echo $row['pet_depo'];  ?>" disabled>
+											
 										</label>
 									</div>
 								</div>
                         
 
                     <h5>The deposit will be returned to the Applicant if the Premises are not rented to the Applicant. </h5>
-                    <h5>The total amount of $______ shall be due upon signature of the lease.</h5>
+					<h5>The total amount of $<span style="color: red;"><?php  echo $row['pet_depo'] + $row['secure_depo'];  ?> </span> shall be due upon signature of the lease.</h5>
                     <h5>An application deposit of $50.00 is due with this application.</h5>
                     <h5>The Applicant understands and agrees that if this Application is accepted and the Applicant fails to execute a lease before the beginning date specified above , or to pa the required deposits and the first month's rent, the application deposit will be forfeited as liquidated damages</h5>
                     <h5>It is alsounderstood that if the Appication is not accepted, or if the Premises are not ready for occupancy by the Applicant on the beginning date specified above, the deposit shall be returned to the Applicant, upon the Applicant request.</h5>
@@ -159,14 +160,14 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-holder form-holder-2">
 										<label for="date" class="special-label">Population of Applicants:</label>
 										<select name="adult" id="Population_adults">
-											<option disabled selected>Adults</option>***************
+											<option disabled selected>Adults</option>
 											<option>1</option>
 											<option>2</option>
 											<option>3</option>
 											<option>4</option>
 										</select>
 										<select name="children" id="Population_children">
-											<option disabled selected>Children</option>*************
+											<option disabled selected>Children</option>
 										    <option>0</option>
 										    <option>1</option>
 											<option>2</option>
@@ -175,7 +176,7 @@ $row = mysqli_fetch_assoc($result) ?>
 											<option>5</option>
 										</select>
 											<select name="pet" id="Population_pets">
-											<option disabled selected>Pets</option>************
+											<option disabled selected>Pets</option>
 											<option>0</option>
 										    <option>1</option>
 											<option>2</option>
@@ -186,12 +187,12 @@ $row = mysqli_fetch_assoc($result) ?>
 										
 									</div>
 								</div><br/>
-									<div class="form-row">
+									
 									<div class="form-row">
 									<div id="radio">
-										<label>Gender:</label>*******************
-										<input type="radio" name="gender" value="Male" checked class="radio-1"> Male
-  										<input type="radio" name="gender" value="Female"> Female 
+										<label>Gender:</label>
+										<input type="radio" name="gender" id="gender" value="Male" checked class="radio-1"> Male
+  										<input type="radio" name="gender" id="gender" value="Female"> Female 
   										&nbsp;&nbsp;&nbsp;&nbsp;
 
 
@@ -202,10 +203,10 @@ $row = mysqli_fetch_assoc($result) ?>
 										<div class="form-row">
 									<div id="radio">
 										<label>Smoker:</label>
-										<input type="radio" name="smoke" value="Yes" checked class="radio-1"> Yes
-  										<input type="radio" name="smoke" value="No"> No
+										<input type="radio" name="smoke" id="smoke" value="Yes" checked class="radio-1"> Yes
+  										<input type="radio" name="smoke" id="smoke" value="No"> No
 									</div>
-								</div>
+								
 								</div><br/>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
@@ -238,7 +239,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="Social" name="social" required>
-											<span class="label">Social Security No:</span>**************
+											<span class="label">Social Security No:</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -247,7 +248,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="License" name="license" required>
-											<span class="label">Driver's License No:</span>*************
+											<span class="label">Driver's License No:</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -256,14 +257,14 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="Vehicle_model" name="model" required>
-											<span class="label">Vehicle Model:</span>**************
+											<span class="label">Vehicle Model:</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 									<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="Vehicle_year" name="year" required>
-											<span class="label">Year:</span>*****************
+											<span class="label">Year:</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -289,68 +290,74 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="rent pay" name="rent_pay" required>
+											<input type="text" class="form-control" id="rentpay" name="rent_pay" required>
 											<span class="label">Current Rent Payment</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 								</div><br/>
-								<div class="form-row">
+								
 									<div class="form-row">
 								<div id="radio">
 										<label>Do you own real estate?:</label>
-										<input type="radio" name="estate" value="Yes" checked class="radio-1"> Yes
-  										<input type="radio" name="estate" value="No">No
+										<input type="radio" name="estate" id="estate" value="Yes" checked class="radio-1"> Yes
+  										<input type="radio" name="estate" id="estate" value="No">No
 									</div>
-								</div>&nbsp;&nbsp;
+								
+								
 										<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="estate_explain" name="estate_explain" required>
+											<input type="text" class="form-control" id="estate_explain" name="estate_explain">
 											<span class="label">If yes, Please Explain:</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 								</div>
 										<div class="form-row">
-									<div class="form-row">
+									
 								<div id="radio">
 										<label>Have you ever been evicted from any rental premises?:</label>
-										<input type="radio" name="evict" value="Yes" checked class="radio-1"> Yes
-  										<input type="radio" name="evict" value="No">No
+										<input type="radio" name="evict" id="evict" value="Yes" checked class="radio-1"> Yes
+  										<input type="radio" name="evict" id="evict" value="No">No
 									</div>
-								</div>&nbsp;&nbsp;
+								</div>
+								<br><br>
+								<div class="form-row">
 										<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="evict_ex" name="evict_explain" required>
+											<input type="text" class="form-control" id="evict_ex" name="evict_explain">
 											<span class="label">If yes, Please Explain:</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 								</div>
-									<div class="form-row">
+									
 									<div class="form-row">
 								<div id="radio">
 										<label>Have you ever willfully and intentionally refused to pay rent when due?:</label>
-										<input type="radio" name="refused" value="Yes" checked class="radio-1"> Yes
-  										<input type="radio" name="refused" value="No">No
+										<input type="radio" name="refused" id="refused" value="Yes" checked class="radio-1"> Yes
+  										<input type="radio" name="refused" id="refused" value="No">No
 									</div>
-								</div>&nbsp;&nbsp;
+								</div>
+
+								<div class="form-row">
 										<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="refused" name="refuse_ex" required>
+											<input type="text" class="form-control" id="refal" name="refuse_ex" >
 											<span class="label">If yes, Please Explain:</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
 								</div>
-								<div class="form-row">
+								
 									<div class="form-row">
 								<div id="radio">
 										<label>Are there any circumstances which may interrupt your income or ability to pay rent?:</label>
-										<input type="radio" name="interrupt" value="yes" checked class="radio-1"> Yes
-  										<input type="radio" name="interrupt" value="no">No
+										<input type="radio" name="interrupt" id="interrupt" value="yes" checked class="radio-1"> Yes
+  										<input type="radio" name="interrupt" id="interrupt" value="no">No
 									</div>
-								</div>&nbsp;&nbsp;
+								</div>
+								<div class="form-row">
 										<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="interrupt_explain" name="interrupt_ex" required>
@@ -359,14 +366,16 @@ $row = mysqli_fetch_assoc($result) ?>
 										</label>
 									</div>
 								</div>
-									<div class="form-row">
+								
 									<div class="form-row">
 								<div id="radio">
 										<label>Have you ever been convicted of a felony?:</label>
-										<input type="radio" name="convict" value="yes" checked class="radio-1"> Yes
-  										<input type="radio" name="convict" value="no">No
+										<input type="radio" name="convict" id="convict" value="yes" checked class="radio-1"> Yes
+  										<input type="radio" name="convict" id="convict" value="no">No
 									</div>
-								</div>&nbsp;&nbsp;
+								</div>
+
+								<div class="form-row">
 										<div class="form-holder">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="convict_ex" name="felony_explain" required>
@@ -414,7 +423,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="company_name" name="company" required>
-											<span class="label">Company Name</span>****************
+											<span class="label">Company Name</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -423,7 +432,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
 											<input type="text" class="form-control" id="office_address" name="office_add" required>
-											<span class="label">Office Address</span>****************
+											<span class="label">Office Address</span>
 					  						<span class="border"></span>
 										</label>
 									</div>
@@ -440,7 +449,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="Employer's_Name" name="supervisor" required>
+											<input type="text" class="form-control" id="Employer_Name" name="supervisor" required>
 											<span class="label">Supervisor's Name</span>
 					  						<span class="border"></span>
 										</label>
@@ -466,7 +475,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-row form-row-date">
 									<div class="form-holder form-holder-2">
 										<label for="date" class="special-label">per:</label>
-										<select name="tenant_per" id="per">
+										<select name="tenant_per" id="perser">
 											<option value="Day" disabled selected></option>
 											<option>Hour</option>
 											<option>Day</option>
@@ -498,7 +507,7 @@ $row = mysqli_fetch_assoc($result) ?>
 			                	<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_Name" name="relate_name" required>
+											<input type="text" class="form-control" id="relative_Name" name="relate_name" required>
 											<span class="label">Name</span>
 					  						<span class="border"></span>
 										</label>
@@ -507,7 +516,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_Address" name="relate_add" required>
+											<input type="text" class="form-control" id="relative_Address" name="relate_add" required>
 											<span class="label">Address</span>
 					  						<span class="border"></span>
 										</label>
@@ -516,7 +525,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_Phone" name="relate_phone" required>
+											<input type="text" class="form-control" id="relative_Phone" name="relate_phone" required>
 											<span class="label">Home Phone:(+1)</span>
 					  						<span class="border"></span>
 										</label>
@@ -525,7 +534,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_relationship" name="relate_relation" required>
+											<input type="text" class="form-control" id="relative_relationship" name="relate_relation" required>
 											<span class="label">Relationship:</span>
 					  						<span class="border"></span>
 										</label>
@@ -535,7 +544,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_Name2" name="per_name_1" required>
+											<input type="text" class="form-control" id="relative_Name2" name="per_name_1" required>
 											<span class="label">Name</span>
 					  						<span class="border"></span>
 										</label>
@@ -544,7 +553,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_Address2" name="per_add_1" required>
+											<input type="text" class="form-control" id="relative_Address2" name="per_add_1" required>
 											<span class="label">Address</span>
 					  						<span class="border"></span>
 										</label>
@@ -553,7 +562,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_Phone2" name="per_phone_1" required>
+											<input type="text" class="form-control" id="relative_Phone2" name="per_phone_1" required>
 											<span class="label">Home Phone:(+1)</span>
 					  						<span class="border"></span>
 										</label>
@@ -562,7 +571,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="relative's_relationship2" name="per_relation_1" required>
+											<input type="text" class="form-control" id="relative_relationship2" name="per_relation_1" required>
 											<span class="label">Relationship:</span>
 					  						<span class="border"></span>
 										</label>
@@ -572,7 +581,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								 <div class="form-row">
 									<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="first_name" name="tenant_name" required>
+											<input type="text" class="form-control" id="t_name" name="tenant_name" required>
 											<span class="label">Applicant's Name</span>
 					  						<span class="border"></span>
 										</label>
