@@ -3,6 +3,8 @@
 // $con = new mysqli("localhost","root","","online_form");
 include("functions/init.php");
 
+if(isset($_POST['renter_add']) || isset($_POST['rentee_add']) || isset($_POST['occ_len']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || isset($_POST['']) || ) {
+
 
 //declaration of variables
 $renter_add 	  = $_POST['renter_add'];
@@ -66,11 +68,13 @@ $app_date        = $_POST['app_date'];
 		 VALUES ('$rentee_add','$renter_add','$occ_date','$occ_length','$bed_num','$reason_move','$secure_depo','$pet_depo','$full_name','$smoke','$pet','$add_now','$add_length','$phone','$cur_rent','$landlord_name','$landlord_phone','$income_source','$employer_name','$position','$employ_length','$supervisor','$income','$relate_name','$relate_add','$relate_phone','$relate_relation','$per_name_1','$per_add_1','$per_phone_1','$per_relation_1','$evict','$evict_ex','$refused','$refused_ex','$interrupt','$interrupt_ex','$convicted','$convicted_ex','$app_date','$tenant_name','$tenant_wage','$tenant_per','$occ_len','$adult','$children','$gender','$social','$license','$model','$year','$estate','$estate_ex','$company','$office_add')";
 
 $result = mysqli_query($con, $sql);
+$_SESSION['su'] = "Your form";
+header("location: ./submitted");
+} else {
 
-if (! $result) {
-    $result = mysqli_error($con);
+header("location: ./error");
+
 }
 
-echo $result;
 
 ?>

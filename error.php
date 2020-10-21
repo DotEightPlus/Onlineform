@@ -1,13 +1,3 @@
-<?php 
-include("functions/init.php");
-if (!isset($_SESSION['su'])) {
-	
-	header("location: ./");
-} else {
-
-	$data = $_SESSION['su'];
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,8 +28,8 @@ if (!isset($_SESSION['su'])) {
 		<div class="wizard-v3-content">
 			<div class="wizard-form">
 				<div class="wizard-header">
-					 <h2 class="title" align="center">Form Submitted :)</h2>
-					<p><?php echo $data; ?></p>
+					 <h2 class="title" align="center">Oh! Snap :(</h2>
+					<p>There was an error processing your form. <br/> Kindly try again.</p>
 					
 				</div>
 

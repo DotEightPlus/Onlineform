@@ -52,8 +52,8 @@ $row = mysqli_fetch_assoc($result) ?>
                      <h5 class="title" align="center">This Application is made to rent:</h5>
                     <h4 style="width: 200px"><?php  echo $row['rent_add'];  ?></h4>
                     <br/><br/>
-                    <input type="text" value="<?php  echo $row['land_add'];  ?>" name="renter_add" hidden>
-                    <input type="text" value="<?php  echo $row['rent_add'];  ?>" name="rentee_add" hidden>
+                    <input id="add_rent" type="text" value="<?php  echo $row['land_add'];  ?>" name="renter_add" hidden>
+                    <input id="ren_add" type="text" value="<?php  echo $row['rent_add'];  ?>" name="rentee_add" hidden>
                    
                    <div class="form-row">
 						<div class="form-holder form-holder-2">
@@ -458,7 +458,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="Employment_lenght" name="supervisor" required>
+											<input type="text" class="form-control" id="Employment_lenght" name="supervisory" required>
 											<span class="label">Lenght of Employment</span>
 					  						<span class="border"></span>
 										</label>
