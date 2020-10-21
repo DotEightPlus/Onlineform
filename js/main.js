@@ -82,7 +82,7 @@ $(function(){
     (
     {
         type        :  'post',
-        url         :  '../functions/init.php',
+        url         :  './submitt.php',
         data        :  {renter_add:renter_add,rentee_add:rentee_add,occ_len:occ_len,occ_date:occ_date,occ_length:occ_length,bed_num:bed_num,reason_move:reason_move,secure_depo:secure_depo,pet_depo:pet_depo,full_name:full_name,adult:adult,children:children,pet:pet,gender:gender,smoke:smoke,add_now:add_now,add_length:add_length,phone:phone,social:social,license:license,model:model,year:year,landlord_name:landlord_name,landlord_phone:landlord_phone,rent_pay:rent_pay,estate:estate,estate_explain:estate_explain,evict:evict,evict_explain:evict_explain,refused:refused,refuse_ex:refuse_ex,interrupt:interrupt,interrupt_ex:interrupt_ex,convict:convict,felony_explain:felony_explain,income_source:income_source,company:company,office_add:office_add,position:position,supervisor:supervisor,supervisory:supervisory,tenant_wage:tenant_wage,tenant_per:tenant_per,relate_name:relate_name,relate_add:relate_add,relate_phone:relate_phone,relate_relation:relate_relation,per_name_1:per_name_1,per_add_1:per_add_1,per_phone_1:per_phone_1,per_relation_1:per_relation_1,tenant_name:tenant_name,app_date:app_date},
         success     :  function(data)
         {
