@@ -67,7 +67,7 @@ $row = mysqli_fetch_assoc($result) ?>
                    	<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="Desired_date" name="occ_date" required>
+											<input type="date" class="form-control" id="Desired_date" name="occ_date" required>
 											<span class="label">Desired date of occupancy:</span>
 					  						<span class="border"></span>
 										</label>
@@ -504,6 +504,7 @@ $row = mysqli_fetch_assoc($result) ?>
 			            <section>
 			                <div class="inner">
 			                	<h3>NEAREST RELATIVE NOT LIVING WITH YOU:</h3>
+			                	<p id="msg"></p>
 			                	<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
