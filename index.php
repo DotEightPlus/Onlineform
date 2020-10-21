@@ -353,8 +353,8 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-row">
 								<div id="radio">
 										<label>Are there any circumstances which may interrupt your income or ability to pay rent?:</label>
-										<input type="radio" name="interrupt" id="interrupt" value="yes" checked class="radio-1"> Yes
-  										<input type="radio" name="interrupt" id="interrupt" value="no">No
+										<input type="radio" name="interrupt" id="interrupt" value="Yes" checked class="radio-1"> Yes
+  										<input type="radio" name="interrupt" id="interrupt" value="No">No
 									</div>
 								</div>
 								<div class="form-row">
@@ -370,8 +370,8 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-row">
 								<div id="radio">
 										<label>Have you ever been convicted of a felony?:</label>
-										<input type="radio" name="convict" id="convict" value="yes" checked class="radio-1"> Yes
-  										<input type="radio" name="convict" id="convict" value="no">No
+										<input type="radio" name="convict" id="convict" value="Yes" checked class="radio-1"> Yes
+  										<input type="radio" name="convict" id="convict" value="No">No
 									</div>
 								</div>
 
