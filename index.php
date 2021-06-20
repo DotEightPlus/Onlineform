@@ -106,7 +106,7 @@ $row = mysqli_fetch_assoc($result) ?>
 										</label>
 									</div>
 								</div>
-								<h4 align="center"> The rent shall be $700.00 per month, payable in advance.</h4><br/>
+				<h4 align="center"> The rent shall be $<?php  echo $row['rent_payable'];  ?> per month, payable in advance.</h4><br/>
                         <h5> The following deposits are required:</h5>
                         		<div class="form-row">
 									<div class="form-holder form-holder-2">
@@ -126,9 +126,9 @@ $row = mysqli_fetch_assoc($result) ?>
                         
 
                     <h5>The deposit will be returned to the Applicant if the Premises are not rented to the Applicant. </h5>
-					<h5>The total amount of $<span style="color: red;"><?php  echo $row['pet_depo'] + $row['secure_depo'];  ?> </span> shall be due upon signature of the lease.</h5>
+					<h5>The total amount of $<span style="color: red;"><?php  echo $row['rent_payable'] + $row['secure_depo'];  ?> </span> shall be due upon signature of the lease.</h5>
                     <h5>An application deposit of $50.00 is due with this application.</h5>
-                    <h5>The Applicant understands and agrees that if this Application is accepted and the Applicant fails to execute a lease before the beginning date specified above , or to pa the required deposits and the first month's rent, the application deposit will be forfeited as liquidated damages</h5>
+                    <h5>The Applicant understands and agrees that if this Application is accepted and the Applicant fails to execute a lease before the beginning date specified above , or to pay the required deposits and the first month's rent, the application deposit will be forfeited as liquidated damages</h5>
                     <h5>It is alsounderstood that if the Appication is not accepted, or if the Premises are not ready for occupancy by the Applicant on the beginning date specified above, the deposit shall be returned to the Applicant, upon the Applicant request.</h5>
                     <h5>Applicant on the beginning date specified above, the deposit shall be returned to the Applicant, upon the Applicant's request.</h5>
                     <h5>The Applicants understands that the Landlord may perform a credit check to verify the Application's credit references and credit history in connection with the processing of this Rental Application.</h5>
@@ -229,7 +229,7 @@ $row = mysqli_fetch_assoc($result) ?>
 									<div class="form-row">
 									<div class="form-holder form-holder-2">
 										<label class="form-row-inner">
-											<input type="number" class="form-control" id="personal_phone" name="phone" required>
+											<input type="text" class="form-control" id="personal_phone" name="phone" required>
 											<span class="label">Home Phone No:(+1)</span>
 					  						<span class="border"></span>
 										</label>
@@ -343,7 +343,7 @@ $row = mysqli_fetch_assoc($result) ?>
 								<div class="form-row">
 										<div class="form-holder">
 										<label class="form-row-inner">
-											<input type="text" class="form-control" id="refal" name="refuse_ex" >
+											<input type="text" class="form-control" id="refal" name="refused_ex" >
 											<span class="label">If yes, Please Explain:</span>
 					  						<span class="border"></span>
 										</label>

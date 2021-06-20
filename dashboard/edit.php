@@ -46,33 +46,41 @@ if(!isset($_SESSION['started'])) {
               <!-- /.card-header -->
               <div class="card-body">
                 <form method="POST" action="edited.php" role="form">
+
                   <div class="form-group">
                     <label for="Landlord Address">Landlord Address:</label>
                     <textarea type="text" required name="land_add" class="form-control col-sm-12 col-lg-6" rows="3" id="sn" placeholder="eg: David Westley
 14018 n 39th ave
 Phonix, Arizona 85053"></textarea>
                   </div>
-                   <div class="form-group">
+
+                  <div class="form-group">
                         <label>Address of house to be rented:</label>
                         <textarea type="text" required name="rent_add" class="form-control col-sm-12 col-lg-6" rows="3" id="ques" placeholder="eg:  House
 9327 Brushy point st
 San Antonio, Texas 78250"></textarea>
-                      </div>
-                   <div class="row">
+                  </div>
+
+                  <div class="row">
                     <div class="col-sm-6">
                        <div class="form-group">
-                    <label for="securitydeposit">Security Deposit ($):</label>
-                    <input type="number" required class="form-control" name="secure_depo" id="oa" placeholder="e.g 1000">
-                  </div>
+                        <label for="securitydeposit">Security Deposit ($):</label>
+                        <input type="number" required class="form-control" name="secure_depo" id="oa" placeholder="e.g 1000">
+                       </div>
                     </div>
 
                     <div class="col-sm-6">
-                       <div class="form-group">
-                    <label for="Petdeposit">Pet Deposit ($):</label>
-                    <input type="number" required class="form-control" name="pet_depo" id="ob" placeholder="e.g 1000">
-                  </div>
+                        <div class="form-group">
+                          <label for="Petdeposit">Pet Deposit ($):</label>
+                          <input type="number" required class="form-control" name="pet_depo" id="ob" placeholder="e.g 1000">
+                        </div>
                     </div>
                     
+                  </div>
+
+                  <div class="form-group">
+                        <label for="Rent Payable">Rent Payable ($):</label>
+                        <input type="number" required class="form-control" name="rent_payable" id="ob" placeholder="e.g 1000">
                   </div>
 
                  <!--   <div class="row">
