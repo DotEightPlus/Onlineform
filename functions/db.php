@@ -1,7 +1,7 @@
 <?php
 //creating the database to use
-// $con = mysqli_connect("localhost","root","","online_form");
-$con = mysqli_connect("localhost","applicat_usernam","securemelikekilode","applicat_onlineform");
+$con = mysqli_connect("localhost","root","","online_form");
+// $con = mysqli_connect("localhost","applicat_usernam","securemelikekilode","applicat_onlineform");
 
 function row_count($result) {
 	global $con;

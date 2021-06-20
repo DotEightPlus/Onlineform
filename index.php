@@ -127,7 +127,7 @@ $row = mysqli_fetch_assoc($result) ?>
 
                     <h5>The deposit will be returned to the Applicant if the Premises are not rented to the Applicant. </h5>
 					<h5>The total amount of $<span style="color: red;"><?php  echo $row['rent_payable'] + $row['secure_depo'];  ?> </span> shall be due upon signature of the lease.</h5>
-                    <h5>An application deposit of $50.00 is due with this application.</h5>
+                    <h5>An application deposit of $<?php  echo $row['app_depo']; ?> is due with this application.</h5>
                     <h5>The Applicant understands and agrees that if this Application is accepted and the Applicant fails to execute a lease before the beginning date specified above , or to pay the required deposits and the first month's rent, the application deposit will be forfeited as liquidated damages</h5>
                     <h5>It is alsounderstood that if the Appication is not accepted, or if the Premises are not ready for occupancy by the Applicant on the beginning date specified above, the deposit shall be returned to the Applicant, upon the Applicant request.</h5>
                     <h5>Applicant on the beginning date specified above, the deposit shall be returned to the Applicant, upon the Applicant's request.</h5>
